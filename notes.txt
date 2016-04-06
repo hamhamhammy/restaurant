@@ -1,0 +1,31 @@
+HOWTO django register/login
+
+Example
+
+	http://www.tangowithdjango.com/book/chapters/login.html
+	http://www.bogotobogo.com/python/Django/Python_Django_hello_world.php
+
+Django Build Script
+
+	sudo easy_install pip
+	sudo pip install Django==1.9.5
+
+Check django version
+
+	python -c "import django; print(django.get_version())”
+
+Digital Ocean
+
+	http://www.digitalocean.com
+
+Digital Ocean connect
+
+	ssh -i /Users/hamzeh/.ssh/hamzeh_ocean_dev root@159.203.251.105
+
+Github personal username
+
+	hamhamhammy
+
+Github multiple accounts on machine
+
+	http://stackoverflow.com/a/12438179
