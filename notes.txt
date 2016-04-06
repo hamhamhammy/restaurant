@@ -5,20 +5,30 @@ Example
 	http://www.tangowithdjango.com/book/chapters/login.html
 	http://www.bogotobogo.com/python/Django/Python_Django_hello_world.php
 
-Django Build Script
+Build Script - git on ubuntu 14.04
+
+	(https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04)
+	sudo apt-get update
+	sudo apt-get install git
+
+Build Script - Django
 
 	sudo easy_install pip
 	sudo pip install Django==1.9.5
+
+Build Script - Django start on digital ocean
+
+	python manage.py runserver 0.0.0.0:8000
 
 Check django version
 
 	python -c "import django; print(django.get_version())”
 
-Digital Ocean
+Digital Ocean setup django on virtual environment
 
-	http://www.digitalocean.com
+	https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-14-04
 
-Digital Ocean connect
+Digital Ocean connect to dev server
 
 	ssh -i /Users/hamzeh/.ssh/hamzeh_ocean_dev root@159.203.251.105
 
