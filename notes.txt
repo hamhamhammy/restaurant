@@ -25,13 +25,49 @@ Build Script - Mosh
 	sudo apt-get install mosh
 	mosh-server & exit
 
-Build Script - MySQL
+Build Script - MySQL install
 
-	(text goes here)
+	(https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
+	sudo apt-get update
+	sudo apt-get install mysql-server
+	sudo mysql_secure_installation
+	sudo mysql_install_db
+
+Build Script - MySQL Django install
+
+	sudo apt-get update
+	sudo apt-get install python-pip python-dev mysql-server libmysqlclient-dev
+	mysql -u root -ppassword
+	CREATE DATABASE restaurant CHARACTER SET UTF8;
+
+MySQL commands
+
+	sudo /etc/init.d/mysql start
+	sudo /etc/init.d/mysql stop
+	mysql -u root -ppassword (or new-password)
+	CREATE DATABASE restaurant CHARACTER SET UTF8;
+	CREATE USER restaurantuser@localhost IDENTIFIED BY 'password';
+	GRANT ALL PRIVILEGES ON restaurant.* TO restaurantuser@localhost;
+	FLUSH PRIVILEGES;
+	exit
+	pip install django mysqlclient
+
+MySQL reset root password
+
+	https://support.rackspace.com/how-to/mysql-resetting-a-lost-mysql-root-password/
+
+Django admin
+
+	root/<super secret password>
 
 Check django version
 
 	python -c "import django; print(django.get_version())”
+
+Digital Ocean create non-root user
+
+	https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
+	slave/password
 
 Digital Ocean setup django on virtual environment
 
