@@ -25,6 +25,10 @@ Build Script - Mosh
 	sudo apt-get install mosh
 	mosh-server & exit
 
+Build Script - MySQL
+
+	(text goes here)
+
 Check django version
 
 	python -c "import django; print(django.get_version())”
