@@ -20,6 +20,11 @@ Build Script - Django start on digital ocean
 
 	python manage.py runserver 0.0.0.0:8000
 
+Build Script - Mosh
+
+	sudo apt-get install mosh
+	mosh-server & exit
+
 Check django version
 
 	python -c "import django; print(django.get_version())”
@@ -28,9 +33,13 @@ Digital Ocean setup django on virtual environment
 
 	https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-14-04
 
-Digital Ocean connect to dev server
+Digital Ocean ssh
 
 	ssh -i /Users/hamzeh/.ssh/hamzeh_ocean_dev root@159.203.251.105
+
+Digital Ocean mosh
+
+	mosh --ssh="ssh -i /Users/hamzeh/.ssh/hamzeh_ocean_dev" root@159.203.251.105
 
 Github personal username
 
