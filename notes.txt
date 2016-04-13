@@ -70,6 +70,10 @@ Check django version
 
 	python -c "import django; print(django.get_version())”
 
+DJango register/login/logout
+
+	http://www.djangobook.com/en/2.0/chapter14.html
+
 Digital Ocean create non-root user
 
 	https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04

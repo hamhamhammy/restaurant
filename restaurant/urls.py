@@ -21,5 +21,6 @@ from django.contrib import admin
 urlpatterns = patterns(
     '',
     url(r'^admin/', admin.site.urls),
-    url(r'^account/', include('restaurant.spa_account.urls'))
+    url(r'^account/', include('restaurant.spa_account.urls')),
+    url(r'^api/', include('restaurant.api.urls')),
 )
