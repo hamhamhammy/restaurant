@@ -1,5 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {{ block.super }}
   spa_account/login.html
+  <div>
+    <input class="username" type="text" placeholder="username or email" value="testuser1"/>
+    <input class="password" type="password" placeholder="password"/>
+    <button>login</button>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('button').click(function() {
+        var username = $('.username').val();
+        var password = $('.password').val();
+
+        console.log('username val = ', username);
+        console.log('password val = ', password);
+
+        $.post('/api/auth/login', { username: username, password: password }).done(function() {
+          window.alert('success');
+        }).error(function() {
+          window.alert('failure');
+        });
+      });
+    });
+  </script>
 {% endblock %}

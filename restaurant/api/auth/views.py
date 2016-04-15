@@ -42,3 +42,8 @@ def login(request):
             return HttpResponse("login failed")
     else:
         return HttpResponse('GET api/auth/login')
+
+@csrf_exempt
+def logout(request):
+    auth.logout(request)
+    return HttpResponse('logout')

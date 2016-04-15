@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {{ block.super }}
   spa_account/logout.html
+  <div>
+    <button>logout</button>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('button').click(function() {
+        console.log('logout');
+
+        $.post('/api/auth/logout').done(function() {
+          window.alert('success');
+        }).error(function() {
+          window.alert('failure');
+        });
+      });
+    });
+  </script>
 {% endblock %}
