@@ -1,7 +1,13 @@
-<!doctype html>
-<html>
-<head></head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+  {{ block.super }}
+  The media_url is: {{ MEDIA_URL }}
   spa_account/index.html
-</body>
-</html>
+{% endblock %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script type="text/javascript" src="{{ MEDIA_URL }}/webpack/vendors.bundle.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}/webpack/spa_account.bundle.js"></script>
+{% endblock %}
