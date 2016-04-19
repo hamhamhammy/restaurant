@@ -13,8 +13,10 @@ import ngResource from 'angular-resource';
 import uiBootstrap from 'angular-ui-bootstrap';
 import uiRouter from 'angular-ui-router';
 
+import routes from './routes';
+
 // Modules
-//import LoginModule from './modules/login';
+import LoginModule from './modules/login';
 
 // Global style
 import './main.scss';
@@ -25,9 +27,11 @@ export default angular
         ngResource,
         uiBootstrap,
         uiRouter,
-    ]);
-    // .config(routes)
+
+        // Modules
+        LoginModule
+
+    ])
+    .config(routes);
     // .config(RouteConfig)
     // .run(Replay);
-
-console.log('hello from spa_account webpack livereload');

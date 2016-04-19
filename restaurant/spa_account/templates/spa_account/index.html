@@ -2,16 +2,16 @@
 
 {% block htmltag %}ng-app="spa-account" ng-strict-di{% endblock %}
 
+{% block metatags %}
+  <base href="/account/" />
+{% endblock %}
+
 {% block stylesheets %}
-  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}webpack/spa_account.bundle.css?v=get_version">
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}webpack/spa_account.bundle.css">
 {% endblock %}
 
 {% block content %}
-  {{ block.super }}
-  spa_account/index.html
-  <base href="/account/" />
-  <div ui-view class="View"></div>
-  <div class="Account">test css</div>
+  <div class="View" ui-view></div>
 {% endblock %}
 
 {% block javascript %}
