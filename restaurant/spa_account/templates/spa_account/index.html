@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 
+{% block htmltag %}ng-app="spa-account" ng-strict-di{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}webpack/spa_account.bundle.css?v=get_version">
+{% endblock %}
+
 {% block content %}
   {{ block.super }}
-  The media_url is: {{ MEDIA_URL }}
   spa_account/index.html
+  <base href="/account/" />
+  <div ui-view class="View"></div>
+  <div class="Account">test css</div>
 {% endblock %}
 
 {% block javascript %}
   {{ block.super }}
   <script type="text/javascript" src="{{ MEDIA_URL }}/webpack/vendors.bundle.js"></script>
   <script type="text/javascript" src="{{ MEDIA_URL }}/webpack/spa_account.bundle.js"></script>
+
+  <script src="{{live_reload_url}}"></script>
 {% endblock %}
