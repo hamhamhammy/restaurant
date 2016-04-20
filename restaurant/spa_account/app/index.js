@@ -17,10 +17,12 @@ import routes from './routes';
 
 // Components
 import LoginFormComponent from './components/login-form';
+import RegisterFormComponent from './components/register-form';
 
 // Modules
 import LoginModule from './modules/login';
 import LogoutModule from './modules/logout';
+import RegisterModule from './modules/register';
 
 // Global style
 import './main.scss';
@@ -34,10 +36,12 @@ export default angular
 
         // Components
         LoginFormComponent,
+        RegisterFormComponent,
 
         // Modules
         LoginModule,
-        LogoutModule
+        LogoutModule,
+        RegisterModule
 
     ])
     .config(routes);
