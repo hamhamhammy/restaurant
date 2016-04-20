@@ -15,6 +15,9 @@ import uiRouter from 'angular-ui-router';
 
 import routes from './routes';
 
+// Components
+import LoginFormComponent from './components/login-form';
+
 // Modules
 import LoginModule from './modules/login';
 
@@ -27,6 +30,9 @@ export default angular
         ngResource,
         uiBootstrap,
         uiRouter,
+
+        // Components
+        LoginFormComponent,
 
         // Modules
         LoginModule

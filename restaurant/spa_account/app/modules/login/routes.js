@@ -5,7 +5,6 @@ function routes($stateProvider) {
     $stateProvider.state('account.login', {
         url: '/login',
         title: 'Login',
-        controller: 'LoginController as ctrl',
         template
     });
 }
