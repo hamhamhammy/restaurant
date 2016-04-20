@@ -20,6 +20,7 @@ import LoginFormComponent from './components/login-form';
 
 // Modules
 import LoginModule from './modules/login';
+import LogoutModule from './modules/logout';
 
 // Global style
 import './main.scss';
@@ -35,7 +36,8 @@ export default angular
         LoginFormComponent,
 
         // Modules
-        LoginModule
+        LoginModule,
+        LogoutModule
 
     ])
     .config(routes);
