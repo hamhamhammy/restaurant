@@ -54,6 +54,11 @@ Build Script - MySQL Django install
 	mysql -u root -ppassword
 	CREATE DATABASE restaurant CHARACTER SET UTF8;
 
+Build Script - npm
+	npm install
+	npm run postinstall
+	npm run build
+
 MySQL commands
 
 	sudo /etc/init.d/mysql start

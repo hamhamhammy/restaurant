@@ -8,6 +8,7 @@
     "build": "webpack --config ./webpack.config.js",
     "test": "karma start ./karma.conf.js --single-run",
     "coverage": "rm -rf ./.coverage; npm test; cat ./.coverage/*/details.txt",
+    "postinstall": "node npm-post-install.js",
     "lint": "find restaurant/spa_* -type f -name '*.js' | xargs eslint"
   },
   "author": "hamhamhammy",
