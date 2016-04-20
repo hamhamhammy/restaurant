@@ -4,6 +4,7 @@ var path = require('path');
 // Add all the application folder names you want to create shortcuts
 // 'spa_common',
 [
+    'spa_common',
     'spa_account/app'
 ].forEach(function(app) {
     var source = path.resolve('restaurant/' + app),
