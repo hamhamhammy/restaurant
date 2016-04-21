@@ -3,20 +3,31 @@
 export default class LoginFormController {
 
     /* @ngInject */
-    constructor($state, $scope, $location, $window, AuthenticationAPI) {
+    constructor($state, $scope, $location, $window, AuthenticationAPI, UsersAPI) {
         this.$state = $state;
         this.$scope = $scope;
         this.$location = $location;
         this.$window = $window;
         this.queryParams = this.$location.search();
         this.AuthenticationAPI = AuthenticationAPI;
+        this.UsersAPI = UsersAPI;
         this.username = 'testuser1';
+        this.userId = '7';
         console.log('LoginForm component constructor');
     }
 
     forgotPasswordClick() {
         this.$state.go('account.forgot-password', { username: this.username });
         return false;
+    }
+
+    getUserDetails() {
+        this.UsersAPI.getUserDetails({id:this.userId}).then((data) => {
+            console.log('UsersAPI getUserDetails success', data);
+        }).catch((err) => {
+            this.loginError = true;
+            console.log('UsersAPI getUserDetails failure', err);
+        });
     }
 
     submitForm() {

@@ -22,9 +22,8 @@ from django.conf.urls import patterns
 from django.conf.urls import url
 from django.contrib import admin
 
-from restaurant.api.auth import views as auth_views
-
 urlpatterns = patterns(
     '',
     url(r'^auth/', include('restaurant.api.auth.urls')),
+    url(r'^users/', include('restaurant.api.users.urls')),
 )

@@ -90,11 +90,17 @@ Django admin
 
 	root/<super secret password>
 
+Django - print object
+
+	>>> help(object)
+	>>> dir(object)
+	>>> object.__dict__
+
 Check django version
 
 	python -c "import django; print(django.get_version())”
 
-DJango register/login/logout
+Django register/login/logout
 
 	http://www.djangobook.com/en/2.0/chapter14.html
 

@@ -3,6 +3,7 @@
 *.swp
 *.swo
 node_modules
+npm-debug.log
 .remote-sync.json
 stats.json
 restaurant/media/webpack
