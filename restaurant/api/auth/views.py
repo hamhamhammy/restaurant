@@ -8,6 +8,7 @@ from django.utils.html import escape
 
 from django.contrib import auth
 from django.contrib.auth.models import User
+from restaurant.api.models import UserProfile
 
 
 @csrf_exempt
@@ -33,8 +34,12 @@ def register(request):
     user = User.objects.create_user(email=email, username=username, password=password)
     user.save()
 
+    userprofile = UserProfile.objects.create(user=user, phone_number='555-555-5555')
+    userprofile.save()
+
     try:
         User.objects.get(pk=user.pk)
+        UserProfile.objects.get(pk=userprofile.pk)
         return HttpResponse('{"success": "created account"}')
     except ObjectDoesNotExist:
         return HttpResponseServerError('{"error": "api failed to create user"}')
